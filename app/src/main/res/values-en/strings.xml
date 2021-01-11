@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/** kwonym - 영어 이름 추가 오후 2:44 **/-->
+<resources>
+    <string name="app_name">Barcode Scanner</string>
+    <string name="langs">Languages</string>
+    <string name="lang">English</string>
+    <string name="history">Histories</string>
+    <string name="scan">Scan</string>
+    <string name="rawBarCd">Raw Barcode</string>
+    <string name="standardBarCd">2D Barcode Standard</string>
+    <string name="div">Classification</string>
+    <string name="header">Header</string>
+    <string name="result">Result</string>
+    <string name="data">Data</string>
+    <string name="specInfo">Spec Info</string>
+    <string name="trackInfo">Track Info</string>
+    <string name="tailer">Tailer</string>
+    <string name="compCd">Comp CD</string>
+    <string name="partNo">Part No</string>
+    <string name="orderCd">Order CD</string>
+    <string name="eoNo">EO No</string>
+    <string name="prodDate">Produced On</string>
+    <string name="part4m">Part 4M</string>
+    <string name="aOr">A or @</string>
+    <string name="trackNo">Track No(7~)</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/** kwonym - 한글 이름 추가 오후 2:44 **/-->
+<resources>
+    <string name="app_name">바코드 스캐너</string>
+    <string name="langs">언어</string>
+    <string name="lang">한국어</string>
+    <string name="history">이력</string>
+    <string name="scan">스캔</string>
+    <string name="rawBarCd">바코드 내용</string>
+    <string name="standardBarCd">2D 바코드 표준</string>
+    <string name="div">구분</string>
+    <string name="header">Header</string>
+    <string name="result">결과</string>
+    <string name="data">데이터</string>
+    <string name="specInfo">사양 정보</string>
+    <string name="trackInfo">추적 정보</string>
+    <string name="tailer">Tailer</string>
+    <string name="compCd">업체코드</string>
+    <string name="partNo">부품번호</string>
+    <string name="orderCd">서열코드</string>
+    <string name="eoNo">EO번호</string>
+    <string name="prodDate">생산일자</string>
+    <string name="part4m">부품4M</string>
+    <string name="aOr">A or @</string>
+    <string name="trackNo">추적번호(7~)</string>
+</resources>
