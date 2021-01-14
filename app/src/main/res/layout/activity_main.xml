@@ -36,6 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/rawBarCd"
+                    android:textStyle="bold"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:gravity="center_vertical|center_horizontal"/>
             </LinearLayout>
@@ -285,10 +286,21 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/result1"
+                        android:id="@+id/result0"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/result1"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -378,17 +390,6 @@
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0sp"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/result10"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
-                </LinearLayout>
 
 
             </LinearLayout>
@@ -416,7 +417,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/data1"
+                        android:id="@+id/data0"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -427,7 +429,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/data2"
+                        android:id="@+id/data1"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -437,9 +440,10 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/data3"
+                        android:id="@+id/data2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal" />
                 </LinearLayout>
@@ -450,7 +454,20 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:id="@+id/data3"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_vertical|center_horizontal"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:id="@+id/data4"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -462,6 +479,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data5"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -473,6 +491,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data6"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -484,6 +503,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data7"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -495,6 +515,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data8"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>
@@ -506,17 +527,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data9"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0sp"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/data10"
+                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center_vertical|center_horizontal"/>
                 </LinearLayout>

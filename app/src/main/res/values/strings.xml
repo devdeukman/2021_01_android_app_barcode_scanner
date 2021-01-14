@@ -23,4 +23,10 @@
     <string name="part4m">부품4M</string>
     <string name="aOr">A or @</string>
     <string name="trackNo">추적번호(7~)</string>
+    <string name="recSep"> <![CDATA[ <b><font color=#ff0000><sup>R</sup><sub>S</sub></font></b> ]]> </string>
+    <string name="grpSep"> <![CDATA[ <b><font color=#0100ff><sup>G</sup><sub>S</sub></font></b> ]]> </string>
+    <string name="endSep"> <![CDATA[ <b><font color=#1ddb16><sup>E</sup>O<sub>T</sub></font></b> ]]> </string>
+    <string name="ok"> <![CDATA[ <b><font color=#0100ff>OK</font></b> ]]> </string>
+    <string name="ng"> <![CDATA[ <b><font color=#ff0000>NG</font></b> ]]> </string>
+    <string name="date">날짜</string>
 </resources>
