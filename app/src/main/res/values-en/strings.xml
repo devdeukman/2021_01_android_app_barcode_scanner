@@ -29,4 +29,8 @@
     <string name="ok"> <![CDATA[ <b><font color=#0100ff>OK</font></b> ]]> </string>
     <string name="ng"> <![CDATA[ <b><font color=#ff0000>NG</font></b> ]]> </string>
     <string name="date">Date</string>
+    <string name="korean">Korean</string>
+    <string name="english">English</string>
+    <string name="selectLang">Language Selection</string>
+    <string name="setLang">Language Setting</string>
 </resources>

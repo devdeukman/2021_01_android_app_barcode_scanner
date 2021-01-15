@@ -6,8 +6,11 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +20,8 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.text.Spannable;
+import android.text.Spanned;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -58,23 +62,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                builder.setMessage("언어 선택");
-                builder.setTitle("언어 설정")
+                builder.setMessage(R.string.selectLang);
+                builder.setTitle(R.string.setLang)
                         .setCancelable(true)
-                        .setPositiveButton("한국어", new DialogInterface.OnClickListener() {
+                        .setPositiveButton(R.string.korean, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 setLocale(MainActivity.this, "ko");
                             }
                         })
-                        .setNegativeButton("English", new DialogInterface.OnClickListener() {
+                        .setNegativeButton(R.string.english, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 setLocale(MainActivity.this, "en");
                             }
                         });
                 AlertDialog alert = builder.create();
-                alert.setTitle("언어 선택");
+                alert.setTitle(R.string.selectLang);
                 alert.show();
             }
         });
@@ -93,12 +97,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 스캔 옵션
+
+                // 기존 내용 clear
+                clearTextViews();
+
                 qrScan.setPrompt("Scanning...");
                 qrScan.setOrientationLocked(false);
                 qrScan.initiateScan();
             }
         });
-
     }
 
     // 결과 받아오기
@@ -114,9 +121,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
                 } else {
                     //qrcode 결과가 있으면
-
-                    // 기존 내용 clear
-                    clearTextViews();
 
                     Toast.makeText(MainActivity.this, "Scanned", Toast.LENGTH_SHORT).show();
 
@@ -151,8 +155,10 @@ public class MainActivity extends AppCompatActivity {
     private void setTextByBusinessRules(String strRaw){
         try {
 
+            // 바코드 예시 : [)>06VD003P55210F2BA0SB120EHB1F0613T20122441SAA0000008
+
             /*
-             * 해당 앱 안에서 볼 수 있는 ASCII -> 문자열
+             * 해당 앱 안에서 볼 수 있는 ASCII -> 문자열로 변환해야함
              * 4 -> EOT(End Of Transmission)
              * 29 -> GS(Group Separator)
              * 30 -> RS(Record Separator)
@@ -180,7 +186,9 @@ public class MainActivity extends AppCompatActivity {
 
             // 바코드내용 칸에 뿌려주기
             txtRawData.setText(Html.fromHtml(strRaw));
-
+            // 바코드내용 칸 글자 하이라이트
+            Spannable span = (Spannable)txtRawData.getText();
+            span.setSpan(new BackgroundColorSpan(Color.YELLOW),0,span.length()-1,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
             // GS를 기준으로 쪼개기 => 비즈니스 로직에 맞춰서 칸에 넣어주기 위해서
             String[] arrRaw = strRaw.split(strGs);
 
@@ -298,7 +306,11 @@ public class MainActivity extends AppCompatActivity {
         String[] results = new String[2];
         if (arrChunk.substring(0,1).equals(firstChar)){
             results[0] = getResources().getString(R.string.ok);
-            results[1] = arrChunk.substring(1);
+            try {
+                results[1] = arrChunk.substring(1);
+            } catch (IndexOutOfBoundsException e) {
+                results[1] = "";
+            }
         } else {
             results[0] = getResources().getString(R.string.ng);
             results[1] = arrChunk;
@@ -311,7 +323,12 @@ public class MainActivity extends AppCompatActivity {
         String[] results = new String[2];
         if ( (arrChunk.substring(0,1).equals(firstChar)) && (arrChunk.length() >= len) ){
             results[0] = getResources().getString(R.string.ok);
-            results[1] = arrChunk.substring(1);
+            try {
+                results[1] = arrChunk.substring(1);
+            } catch (IndexOutOfBoundsException e) {
+                results[1] = "";
+            }
+
         } else {
             results[0] = getResources().getString(R.string.ng);
             results[1] = arrChunk;
