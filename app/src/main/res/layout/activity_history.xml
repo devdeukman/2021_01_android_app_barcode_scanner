@@ -11,32 +11,52 @@
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:text="@string/history"
-        android:textSize="30sp"
-        android:paddingLeft="@android:dimen/app_icon_size"/>
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|left"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/top_round_square"
+        android:drawableLeft="@drawable/header_img_reduction"
+        android:paddingLeft="5dp"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#555555">
+        android:background="#555555"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp">
     <TextView
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:text="@string/history"
         android:layout_weight="2"
         android:gravity="center_horizontal"
-        android:textColor="#FFFFFF"/>
+        android:textColor="#040500"
+        android:background="@drawable/gray_square"
+        android:textStyle="bold"/>
         <TextView
             android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:text="@string/date"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#040500"
+            android:background="@drawable/gray_square"
+            android:textStyle="bold"/>
     </LinearLayout>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listHist"/>
+        android:id="@+id/listHist"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColor="#040500"
+        android:textStyle="bold"
+        android:background="@drawable/white_square"/>
 
 
 

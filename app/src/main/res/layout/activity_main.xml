@@ -6,39 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0sp"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0sp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50sp">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/rawBarCd"
-                    android:tag="rawBarCd"
                     android:layout_gravity="center_horizontal|center_vertical"
-                    android:gravity="center_vertical|center_horizontal"/>
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/top_round_square"
+                    android:drawableLeft="@drawable/header_img_reduction"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="5dp"
+                    android:shadowColor="#042a47"
+                    android:tag="rawBarCd"
+                    android:text="@string/rawBarCd"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0sp"
                 android:layout_weight="1">
                 <TextView
+                    android:id="@+id/rawBarCd"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rawBarCd"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="6dp"
+                    android:background="@drawable/bottom_round_square"
+                    android:bufferType="spannable"
+                    android:gravity="center_vertical|left"
+                    android:textColor="#040500"
+                    android:textSize="15dp"
                     android:textStyle="bold"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:gravity="center_vertical|center_horizontal"/>
+                    android:lineSpacingMultiplier="1.5"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -49,14 +71,28 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50sp">
+            android:layout_height="50sp"
+            android:layout_gravity="top"
+            >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/standardBarCd"
                 android:tag="standardBarCd"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center_vertical|center_horizontal"/>
+                android:gravity="center_vertical|left"
+                android:background="@drawable/top_round_square"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/header_img_reduction"
+                android:paddingLeft="5dp"
+
+                />
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +100,10 @@
             android:layout_weight="5"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:gravity="center_vertical|center_horizontal">
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            >
             <LinearLayout
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
@@ -77,11 +116,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="@string/div"
-                        android:tag="div"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
-
+                        android:text="구분"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:tag="div"
+                        android:textColor="#040500"
+                        android:background="@drawable/gray_square"
+                        android:textStyle="bold"
+                        />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -93,7 +135,10 @@
                         android:text="@string/header"
                         android:tag="header"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/gray_square"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -111,7 +156,10 @@
                             android:text="@string/specInfo"
                             android:tag="specInfo"
                             android:layout_gravity="center_horizontal|center_vertical"
-                            android:gravity="center_vertical|center_horizontal"/>
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textStyle="bold"
+                            android:textColor="#040500"
+                            android:background="@drawable/gray_square"/>
 
 
                     </LinearLayout>
@@ -130,7 +178,10 @@
                                 android:text="@string/compCd"
                                 android:tag="compCd"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -142,7 +193,11 @@
                                 android:text="@string/partNo"
                                 android:tag="partNo"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"
+                                />
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -154,7 +209,10 @@
                                 android:text="@string/orderCd"
                                 android:tag="orderCd"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -166,7 +224,10 @@
                                 android:text="@string/eoNo"
                                 android:tag="eoNo"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -188,7 +249,10 @@
                             android:text="@string/trackInfo"
                             android:tag="trackInfo"
                             android:layout_gravity="center_horizontal|center_vertical"
-                            android:gravity="center_vertical|center_horizontal"/>
+                            android:gravity="center_vertical|center_horizontal"
+                            android:textStyle="bold"
+                            android:textColor="#040500"
+                            android:background="@drawable/gray_square"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0sp"
@@ -206,7 +270,10 @@
                                 android:text="@string/prodDate"
                                 android:tag="prodDate"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -218,7 +285,10 @@
                                 android:text="@string/part4m"
                                 android:tag="part4m"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
 
                         </LinearLayout>
                         <LinearLayout
@@ -231,7 +301,10 @@
                                 android:text="@string/aOr"
                                 android:tag="aOr"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -243,7 +316,10 @@
                                 android:text="@string/trackNo"
                                 android:tag="trackNo"
                                 android:layout_gravity="center_horizontal|center_vertical"
-                                android:gravity="center_vertical|center_horizontal"/>
+                                android:gravity="center_vertical|center_horizontal"
+                                android:textStyle="bold"
+                                android:textColor="#040500"
+                                android:background="@drawable/gray_square"/>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -258,13 +334,16 @@
                         android:text="@string/tailer"
                         android:tag="tailer"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/gray_square"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="0sp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="0.7"
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -276,7 +355,10 @@
                         android:text="@string/result"
                         android:tag="result"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/gray_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -288,7 +370,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result0"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -300,7 +386,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result1"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -311,7 +401,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result2"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -322,7 +416,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result3"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -333,7 +431,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result4"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -344,7 +446,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result5"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -355,7 +461,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result6"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -366,7 +476,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result7"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -377,7 +491,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result8"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -388,7 +506,11 @@
                         android:layout_height="match_parent"
                         android:id="@+id/result9"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#0405dc"
+                        android:textSize="18dp"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
 
 
@@ -408,7 +530,10 @@
                         android:text="@string/data"
                         android:tag="data"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/gray_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -420,7 +545,9 @@
                         android:id="@+id/data0"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -430,9 +557,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data1"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -445,7 +574,9 @@
                         android:layout_height="match_parent"
                         android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal" />
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -455,9 +586,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data3"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -467,9 +600,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data4"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -479,9 +614,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data5"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -491,9 +628,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data6"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -503,9 +642,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data7"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -515,9 +656,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data8"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -527,9 +670,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/data9"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:gravity="center_vertical|center_horizontal"/>
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="#040500"
+                        android:background="@drawable/white_square"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -539,29 +684,64 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60sp"
-        android:orientation="horizontal">
+        android:layout_height="3dp"
+        android:background="@drawable/bottom_line">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal"
+        android:background="@drawable/stripe">
         <Button
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/langs"
             android:tag="langs"
-            android:id="@+id/btnLang"/>
+            android:id="@+id/btnLang"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="19dp"
+            android:color="#0075ba"
+            android:background="@drawable/button_square"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="1.5dp"/>
         <Button
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/history"
             android:tag="history"
-            android:id="@+id/btnHistory"/>
+            android:id="@+id/btnHistory"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="19dp"
+            android:color="#0075ba"
+            android:background="@drawable/button_square"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="1.5dp"
+            android:layout_marginRight="1.5dp"/>
         <Button
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/scan"
             android:tag="scan"
-            android:id="@+id/btnScan"/>
+            android:id="@+id/btnScan"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="19dp"
+            android:color="#0075ba"
+            android:background="@drawable/button_square"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="1.5dp"
+            android:layout_marginRight="3dp"/>
     </LinearLayout>
 
 </LinearLayout>
