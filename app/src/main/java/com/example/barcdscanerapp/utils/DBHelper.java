@@ -1,14 +1,10 @@
 package com.example.barcdscanerapp.utils;
 
-
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -68,6 +64,7 @@ public class DBHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
 
+        db.close();
         return results;
     }
 

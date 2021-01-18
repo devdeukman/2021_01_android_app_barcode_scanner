@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aOr">A or @</string>
+    <string name="app_name">Barcode Scanner</string>
+    <string name="compCd">Comp CD</string>
+    <string name="data">Data</string>
+    <string name="date">Date</string>
+    <string name="div">Classification</string>
+    <string name="endSep"> <![CDATA[ <b><font color=#1ddb16><sup>E</sup>O<sub>T</sub></font></b> ]]> </string>
+    <string name="eoNo">EO No</string>
+    <string name="grpSep"> <![CDATA[ <b><font color=#0100ff><sup>G</sup><sub>S</sub></font></b> ]]> </string>
+    <string name="header">Header</string>
+    <string name="history">Histories</string>
+    <string name="lang">English</string>
+    <string name="langs">Languages</string>
+    <string name="ng"> <![CDATA[ <b><font color=#ff0000>NG</font></b> ]]> </string>
+    <string name="ok"> <![CDATA[ <b><font color=#0100ff>OK</font></b> ]]> </string>
+    <string name="orderCd">Order CD</string>
+    <string name="part4m">Part 4M</string>
+    <string name="partNo">Part No</string>
+    <string name="prodDate">Produced On</string>
+    <string name="rawBarCd">Raw Barcode</string>
+    <string name="recSep"> <![CDATA[ <b><font color=#ff0000><sup>R</sup><sub>S</sub></font></b> ]]> </string>
+    <string name="result">Result</string>
+    <string name="scan">Scan</string>
+    <string name="specInfo">Spec Info</string>
+    <string name="standardBarCd">2D Barcode Standard</string>
+    <string name="tailer">Tailer</string>
+    <string name="trackInfo">Track Info</string>
+    <string name="trackNo">Track No(7~)</string>
+</resources>

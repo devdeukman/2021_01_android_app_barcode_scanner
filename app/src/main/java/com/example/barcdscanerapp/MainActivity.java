@@ -10,8 +10,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -143,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
             }
         } else if (requestCode == 12345) { // 기록에서 받아오기
             if (resultCode == RESULT_OK) {
+                // 전체 목록 비우고
+                clearTextViews();
                 // 정보를 받아서
                 String strHist = data.getStringExtra("QRCODE");
                 // 표에서 다시 보여주기
@@ -285,20 +285,12 @@ public class MainActivity extends AppCompatActivity {
 
     // Header 규칙에 상응하는지 확인 후 결과 리턴
     private boolean isHeaderRight(String strScan, String strHeaderRule){
-        if ( (strScan.startsWith(strHeaderRule)) && (strScan.length() == strHeaderRule.length()+2) ) {
-            return true;
-        } else {
-            return false;
-        }
+        return (strScan.startsWith(strHeaderRule)) && (strScan.length() == strHeaderRule.length() + 2);
     }
 
     // Header 규칙에 상응하는지 확인 후 결과 리턴
     private boolean isFooterRight(String strScan, String strFooterRule){
-        if (strScan.equals(strFooterRule)){
-            return true;
-        } else {
-            return false;
-        }
+        return strScan.equals(strFooterRule);
     }
 
     // 시작 글자에 맞는 규칙 적용한 후 결과 리턴
@@ -348,6 +340,9 @@ public class MainActivity extends AppCompatActivity {
 
     // TextView Text 초기화
     private void clearTextViews(){
+
+        txtRawData.setText("");
+
         for (int i = 0; i < 10; i++) {
 
             setTextToTextViewByIdNo("", "result", i);

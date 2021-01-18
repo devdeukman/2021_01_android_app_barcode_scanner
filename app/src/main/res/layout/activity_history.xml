@@ -48,7 +48,7 @@
             android:background="@drawable/gray_square"
             android:textStyle="bold"/>
     </LinearLayout>
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/listHist"

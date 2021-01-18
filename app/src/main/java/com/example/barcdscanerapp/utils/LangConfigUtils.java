@@ -3,7 +3,6 @@ package com.example.barcdscanerapp.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Configuration;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -82,6 +81,5 @@ public class LangConfigUtils {
             e.printStackTrace();
         }
 
-//        Log.i(TAG, "getLocale : " + Locale.getDefault().toString());
     }
 }
