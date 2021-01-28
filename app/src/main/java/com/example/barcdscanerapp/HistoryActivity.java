@@ -33,18 +33,26 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        // DB 정의
+
+        // --------------------------------- DB 클래스 정의 ----------------------------------------
         dbHelper = new DBHelper(getApplicationContext(), "scanHistory", null, 1);
-        // 내장 DB에서 데이터 받아올 객체 정의(ArrayList)
+        // ----------------------------------------------------------------------------------------
+
+
+        // ------------------- DB 데이터 받아올 객체 정의(ArrayList) -------------------------------
         arrQuery = new ArrayList<>();
         arrQuery = dbHelper.getHistories();
+        // ----------------------------------------------------------------------------------------
 
-        // 리사이클러뷰 정의
+
+        // -------------------------------- 리사이클러뷰 정의 --------------------------------------
         RecyclerView mRecyclerView = findViewById(R.id.listHist);
         LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
+        // ----------------------------------------------------------------------------------------
 
 
+        // --------------------------- 리사이클러뷰 어뎁터 정의 ------------------------------------
         RecyclerAdapter mAdapter = new RecyclerAdapter(arrQuery);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
@@ -58,6 +66,7 @@ public class HistoryActivity extends AppCompatActivity {
                 finish();
             }
         });
+        // ----------------------------------------------------------------------------------------
 
     }
 }

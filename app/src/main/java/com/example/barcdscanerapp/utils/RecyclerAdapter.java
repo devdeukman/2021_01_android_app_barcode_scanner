@@ -28,7 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Custom
     }
 
     private ArrayList<HashMap<String,Object>> mList = null;
-    // 0
+
     public RecyclerAdapter(ArrayList<HashMap<String,Object>> list){this.mList = list;}
 
     public class CustomViewHolder extends RecyclerView.ViewHolder{

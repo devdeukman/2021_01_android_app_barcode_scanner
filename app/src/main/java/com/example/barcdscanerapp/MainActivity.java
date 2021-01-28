@@ -40,21 +40,33 @@ public class MainActivity extends AppCompatActivity {
     TextView txtRawData;
     IntentIntegrator qrScan;
     DBHelper dbHelper;
+    final int intHistCd = 12345; // history activity로 부터 intent 넘겨받을때 반환코드
+    final int intScanCd = 49374; // scan activity로 부터 intent 넘겨받을때 반환코드
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mContext = MainActivity.this;
 
-        dbHelper = new DBHelper(getApplicationContext(), "scanHistory", null, 1);
 
+        // --------------------------- 스캔 데이터 텍스트뷰 정의 ------------------------------------
         txtRawData = findViewById(R.id.rawBarCd);
+        // ----------------------------------------------------------------------------------------
 
-        // 스캔 모듈
+
+        // ------------------------------- DB 클래스 정의 ------------------------------------------
+        dbHelper = new DBHelper(getApplicationContext(), "scanHistory", null, 1);
+        // ----------------------------------------------------------------------------------------
+
+
+        // ------------------------------- 스캔 모듈 정의 ------------------------------------------
         qrScan = new IntentIntegrator(this);
+        // ----------------------------------------------------------------------------------------
 
+
+        // --------------------------------- 버튼 정의 ---------------------------------------------
+        // 언어 설정 버튼 정의
         Button btnLang = findViewById(R.id.btnLang);
         btnLang.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,29 +93,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 기록 버튼 정의
         Button btnHistory = findViewById(R.id.btnHistory);
         btnHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),HistoryActivity.class);
-                startActivityForResult(intent, 12345);
+                startActivityForResult(intent, intHistCd);
             }
         });
 
+        // 스캔 버튼 정의
         Button btnScan = findViewById(R.id.btnScan);
         btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // 스캔 옵션
 
                 // 기존 내용 clear
                 clearTextViews();
 
+                // 스캔 옵션
                 qrScan.setPrompt("Scanning...");
                 qrScan.setOrientationLocked(false);
                 qrScan.initiateScan();
             }
         });
+
+        // ----------------------------------------------------------------------------------------
     }
 
     // 결과 받아오기
@@ -111,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         // Scan 받아오기
         //  requestCode = 49374
-        if (requestCode == 49374) {
+        if (requestCode == intScanCd) {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
             if (result != null) {
                 //qrcode 가 없으면
@@ -139,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 super.onActivityResult(requestCode, resultCode, data);
             }
-        } else if (requestCode == 12345) { // 기록에서 받아오기
+        } else if (requestCode == intHistCd) { // 기록에서 받아오기
             if (resultCode == RESULT_OK) {
                 // 전체 목록 비우고
                 clearTextViews();
@@ -152,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // 스캔한 바코드에 비지니스룰 적용하는 메소드
     private void setTextByBusinessRules(String strRaw){
         try {
 
